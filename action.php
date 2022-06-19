@@ -5,7 +5,7 @@ $subject = 'KINGDOM STUDY Message';
 
 $headers  = "From: " . strip_tags($_POST['req-email']) . "\r\n";
 $headers .= "Reply-To: " . strip_tags($_POST['req-email']) . "\r\n";
-$headers .= "CC: susan@example.com\r\n";
+$headers .= "CC: freefreelanceruzb@gmail.com\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
