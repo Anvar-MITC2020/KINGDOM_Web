@@ -13,4 +13,9 @@ $message = '<p><strong>This is strong text</strong> while this is not.</p>';
 
 
 mail($to, $subject, $message, $headers);
+
+if(mail($to, $subject, $message, $headers)){ 
+   echo 'Email has sent successfully.'; 
+}else{ 
+   echo 'Email sending failed.';
 ?>
