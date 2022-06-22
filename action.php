@@ -9,9 +9,9 @@
     $send_message=mail($to, $subject, $formcontent, $mailheader);
 
     if($send_message){
-        echo "thank you"
+        echo "Email has sent successfully" 
     } else {
-        echo "error";
+        echo "Email sending failed";
     }
 ?>
 
