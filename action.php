@@ -1,22 +1,18 @@
-<?php
-$to = 'freefreelancer@gmail.com';
+<?php 
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $formcontent="From: $name \n Message: $message";
+    $to = 'freefreelancer@gmail.com';
+    $subject = "Contact Form";
+    $mailheader = "From: $email \r\n";
+    $send_message=mail($to, $subject, $formcontent, $mailheader);
 
-$subject = 'KINGDOM STUDY Message';
-
-$headers  = "From: " . strip_tags($_POST['req-email']) . "\r\n";
-$headers .= "Reply-To: " . strip_tags($_POST['req-email']) . "\r\n";
-$headers .= "CC: freefreelanceruzb@gmail.com\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-
-$text = $_POST['text'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-
-mail($to, $subject, $text, $email, $message, $headers);
-
-if(mail($to, $subject, $text, $email, $message, $headers)){ 
-   echo 'Email has sent successfully.'; 
-}else{ 
-   echo 'Email sending failed.';
+    if($send_message){
+        echo "thank you"
+    } else {
+        echo "error";
+    }
 ?>
+
+
