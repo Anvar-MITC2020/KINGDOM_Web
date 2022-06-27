@@ -950,6 +950,9 @@
     .contact-image {
       margin-top: 0;
     }
+    .map-container {
+      height : fit-content;
+    } 
   }
 
   @media only screen and (max-width: 480px) {
